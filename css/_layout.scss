@@ -1,0 +1,121 @@
+$primaryRed: hsl(0, 100%, 74%);
+$primaryGreen: hsl(154, 59%, 51%);
+
+$secondaryBlue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$greyBlue: hsl(246, 25%, 77%);
+
+$fontSize: 16px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: url('/images/bg-intro-desktop.png');
+    background-color: $primaryRed;
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.content_left {
+    color: #fff;
+    width: 50%;
+
+    h1 {
+        font-size: 5em;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: $fontSize;
+        width: 90%;
+    }
+}
+
+.content_right {
+    width: 50%;
+
+    &_cta {
+        width: 100%;
+        background-color: $secondaryBlue;
+        text-align: center;
+        color: #fff;
+        padding: 3px 0;
+        border-radius: 13px;
+        margin-bottom: 25px;
+        box-shadow: 0px 6px 0px 0px rgba(84,86,107,0.37);        
+        
+        p {
+            font-size: 15px;
+        }
+    }
+
+    &_form {
+        // height: 400px;
+        background-color: #fff;
+        box-shadow: 0px 6px 0px 0px rgba(84,86,107,0.37);        
+        border-radius: 13px;
+        padding: 40px;
+
+        form {
+            width: 100%;
+
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                height: 55px;
+                border-radius: 5px;
+                outline: none;
+                border: 1px solid $greyBlue;
+                margin-bottom: 25px;
+                font-size: 14px;
+                font-weight: 600;
+                padding-left: 30px;
+            }
+
+            button {
+                width: 100%;
+                height: 55px;
+                border-radius: 5px;
+                background: $primaryGreen;
+                color: #fff;
+                font-weight: 700;
+                letter-spacing: 1.3px;
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 8px;
+                box-shadow: 0px 4px 0px 0px rgba(33,132,89,.8);        
+
+            }
+
+            p {
+                text-align: center;
+                color: $greyBlue;
+                font-size: 12px;
+            }
+        }
+
+        &--terms {
+            color: $primaryRed;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+    }
+
+}
