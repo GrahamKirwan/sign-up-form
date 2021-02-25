@@ -7,7 +7,8 @@ const emailErrorMsg = document.querySelector('.emptyFieldSpan2');
 
 
 
-button.addEventListener('click', function(){
+button.addEventListener('click', function(e){
+    e.preventDefault();
     let email = inputEmail.value;
     for(let i=0; i<inputArray.length; i++) {
         if(inputArray[i].value == '') {
