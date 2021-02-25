@@ -42,7 +42,7 @@ function formSuccess() {
         inputArray[i].value = '';
     }
     button.innerHTML = 'Success <i class="far fa-check-circle"></i>';
-    form.submit();
+    // form.submit();
 
     setTimeout(function(){ button.innerHTML = 'claim your free trial'; }, 2000);
 
