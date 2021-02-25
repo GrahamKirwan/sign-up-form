@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
@@ -26,12 +27,17 @@
           <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
         </div>
         <div class="content_right_form">
-          <form action="#">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password">
-            <button>Claim your free trial</button>
+          <form action="#" id="form" novalidate>
+            <input type="text" class="input" placeholder="First Name" >
+            <p class="emptyFieldSpan hidden"><em>First Name cannot be empty</em></p>
+            <input type="text" class="input" placeholder="Last Name" >
+            <p class="emptyFieldSpan hidden"><em>Last Name cannot be empty</em></p>
+            <input type="email" class="input inputEmail" placeholder="Email Address">
+            <p class="emptyFieldSpan hidden"><em>Email cannot be empty</em></p>
+            <p class="emptyFieldSpan2 hidden"><em>Looks like this is not an email</em></p>
+            <input type="password" class="input" placeholder="Password" >
+            <p class="emptyFieldSpan hidden"><em>Password cannot be empty</em></p>
+            <button id="formButton">Claim your free trial</button>
             <p>By clicking the button, you are agreeing to our <a href="#" class="content_right_form--terms">Terms and Services</a></p>
           </form>
         </div>
@@ -39,21 +45,6 @@
     </div>
   </section>
 
-  <!-- Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services -->
-  
+  <script src="js/main.js"></script>
 </body>
 </html>

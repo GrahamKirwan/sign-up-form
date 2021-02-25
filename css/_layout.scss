@@ -20,6 +20,10 @@ section {
     height: 100vh;
     background: url('/images/bg-intro-desktop.png');
     background-color: $primaryRed;
+
+    @media (max-width: 900px) {
+        height: initial;
+    }
 }
 
 .container {
@@ -28,6 +32,12 @@ section {
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
 }
 
 .content_left {
@@ -38,11 +48,26 @@ section {
         font-size: 5em;
         line-height: 1.1;
         margin-bottom: 30px;
+
+        @media (max-width: 600px) {
+            font-size: 3em;
+            margin-top: 40px;
+        }
     }
 
     p {
         font-size: $fontSize;
         width: 90%;
+
+        @media (max-width: 600px) {
+            width: 100%;
+            font-size: 14px;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        width: 100%;
     }
 }
 
@@ -85,9 +110,21 @@ section {
                 font-size: 14px;
                 font-weight: 600;
                 padding-left: 30px;
+                color: $darkBlue;
             }
 
-            button {
+            input:active,
+            input:focus {
+                border: 1px solid $darkBlue;
+            }
+
+            input:hover {
+                border: 1px solid $darkBlue;
+            }
+
+            button,
+            button:active,
+            button:focus {
                 width: 100%;
                 height: 55px;
                 border-radius: 5px;
@@ -97,16 +134,54 @@ section {
                 letter-spacing: 1.3px;
                 text-transform: uppercase;
                 border: none;
+                outline: none;
                 cursor: pointer;
                 margin-bottom: 8px;
-                box-shadow: 0px 4px 0px 0px rgba(33,132,89,.8);        
+                transition: all .2s;
+                box-shadow: 0px 4px 0px 0px rgba(33,132,89,.8); 
+            }
 
+            button:hover {
+                background: #8acfb2;
+                    
             }
 
             p {
                 text-align: center;
                 color: $greyBlue;
                 font-size: 12px;
+            }
+
+            .emptyField,
+            .emptyField:active,
+            .emptyField:focus {
+                border: 2px solid $primaryRed;
+                
+            }
+
+            .emptyFieldSpan,
+            .emptyFieldSpan2 {
+                color: $primaryRed;
+                display: inline;
+                float: right;
+                margin-top: -20px;
+                position: relative;
+            }
+
+            .emptyFieldSpan::before,
+            .emptyFieldSpan2::before {
+                content: "";
+                position: absolute;
+                right: 15px;
+                top: -45px;
+                bottom: 0;
+                width: 25px;
+                background: url(/images/icon-error.svg);
+                background-repeat: no-repeat;
+            }
+
+            .hidden {
+                display: none;
             }
         }
 
@@ -115,7 +190,16 @@ section {
             text-decoration: none;
             font-weight: 700;
         }
+
+        @media (max-width: 900px) {
+            padding: 30px;
+        }
         
+    }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        margin-bottom: 100px;
     }
 
 }
